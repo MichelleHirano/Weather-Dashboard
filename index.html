@@ -4,45 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Bootstrap-->
-    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
+    <!--css>-->
     <link rel='stylesheet' type='text/css' href='assets/style.css'>
     <title>Weather Dashboard</title>
 </head>
 
 <body>
+    <div class = 'container'>
     <!--Header-->
-    <header class="title">
-        <h1> Weather Dashboard</h1>
-    </header>
+    <div id = 'title' class="row">
+        <h1 class='text-center'> Weather Dashboard</h1>
+    </div>
 
     <div class='container'>
         <div class='row'>
+
             <!--Search-->
-            <aside class="search">
+            <div class="col-md-3" id="search-content">
                 <h2>Search for a city:</h2>
-                <div class="form-inline">
-                    <input class = "form" type="text" id="search-value" placeholder="Type a City Name">
-                    <button class='btn' id='search-button'></button>
+                <div class="form-row">
+                    <input class = "form" type="text" id="search-city" placeholder="Type a City Name">
+                    <button class='btn' id='search-button'><i class="fas fa-search"></i></button>
                 </div>
                 <!--search history display-->
-                    <ul class='list-history'>
-                        <li class='list-item'></li>
-                    </ul>
-            </aside>
+                    <ul class='list-group' id='city-results'></ul>
+                    <a id='clear-saved' href='#'></a>
+                </div>
 
     <!--City Card-->
-            <div class='main-container'>
-                <div id='today'>
-                    <div class='card'>
-                        <div class='card-body'>
-                            <h3 calss='card-title'></h3>
-                            <!--Temp Humidity and Wind Speed-->
-                            <p class='card-text'></p>
-                            <p class='card-text'></p>
-                            <p class='card-text'></p>
-                        </div>
-                    </div>
-                </div>
+            <div id='main-container' class='col-md-9'>
+                <div id='today' class='rounded-top'></div>
+                
                 <!--5-Day Forecast-->
                     <div id='forecast'>
                         <h4 class='forecast-title'>5-Day Forecast:</h4>
@@ -61,9 +56,19 @@
 
     </div>
     </div>
-    <!--Jquery-->
-    <script src=''></script>
 
+
+
+
+
+<!--last div-->
+</div>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- moment.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src='assets/script.js'></script>
 </body>
 </html>
