@@ -1,0 +1,14 @@
+.title{
+    text-align: center;
+    background:#3B3B38;
+    font-weight: bold;
+    color: whitesmoke;
+}
+
+.maincontainer{
+    background-color:#f8f5f3;
+}
+
+.search{
+    background-color: #f4eeed;
+}
