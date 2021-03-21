@@ -31,3 +31,10 @@ for (var i = 0; i < localStorage.length; i++){
      console.log(response);
  }
  )
+
+ //Append
+ $('.city').html('<h1>'+ response.name + '</h1>');
+ $('.icon').html("<img src='https://openweathermap.org/img/w/" + response.weather[0].icon + ".png' >" );
+ $('.wind').text("Wind Speed: " + response.wind.speed + " MPH");
+ $('.humidity').text("Humidity: " + response.main.humidity + "%");
+ 
