@@ -24,16 +24,16 @@ for (var i = 0; i < localStorage.length; i++){
 
  $.ajax({
      url: queryURL,
-     method:'GET'
+     method:"GET"
  })
  .then(function(response){
      console.log(queryURL);
      console.log(response);
- }
- )
+ 
+ 
 
  //Append
- $('.city').html('<h1>'+ response.name + '</h1>');
+ $('.city').html("<h1>"+ response.name + "</h1>");
  $('.icon').html("<img src='https://openweathermap.org/img/w/" + response.weather[0].icon + ".png' >" );
  $('.wind').text("Wind Speed: " + response.wind.speed + " MPH");
  $('.humidity').text("Humidity: " + response.main.humidity + "%");
@@ -51,5 +51,30 @@ $.ajax({
     $('.uv').text("UV Index: " + response.value);
     $('.uv').css("background-color", 'red');
 }
-)
+);
 
+ });
+
+//5day forecast
+$.ajax({
+    url: queryURLFive,
+    method: "GET"
+})// We store all of the retrieved data inside of an object called "response"
+.then(function(response) {
+    console.log(queryURLFive);
+    console.log(response);
+
+var dayOne = moment(response.list[0].dt_txt).format("ddd, MMM D");
+console.log(moment(response.list[0].dt_txt).format("ddd, MMM D"));
+
+// Transfer day 1 content to HTML
+$(".day-one-date").html("<h6>" + dayOne + "</h6>");
+$(".day-one-icon").html("<img src='https://openweathermap.org/img/w/" + response.list[0].weather[0].icon + ".png' alt='Icon depicting current weather.'>");
+$(".day-one-humidity").text("Humidity: " + response.list[0].main.humidity + "%");
+
+
+
+
+
+
+})
