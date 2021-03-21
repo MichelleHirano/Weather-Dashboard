@@ -17,8 +17,8 @@ for (var i = 0; i < localStorage.length; i++){
 }
 
 //URL for database
-    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + apiKey;
-    var queryURLFive = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + apiKey;
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + '&units=imperial' + apiKey;
+    var queryURLFive = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + '&units=imperial' +  apiKey;
 
  //AJAX to call API
 
@@ -37,6 +37,7 @@ for (var i = 0; i < localStorage.length; i++){
  $('.icon').html("<img src='https://openweathermap.org/img/w/" + response.weather[0].icon + ".png' >" );
  $('.wind').text("Wind Speed: " + response.wind.speed + " MPH");
  $('.humidity').text("Humidity: " + response.main.humidity + "%");
+ $(".tempF").text("Temperature: " + response.main.temp + " F");
 
 var lon = response.coord.lon;
 var lat = response.coord.lon;
