@@ -16,7 +16,7 @@
 <body>
     
     <!--Header-->
-    <nav  class="navbar navbar-light bg-light">
+    <nav  class="navbar">
         <span class='text-center'> Weather Dashboard</span>
     </nav>
 
@@ -25,18 +25,21 @@
 
             <!--Search-->
             <div class="col-md-3" id="search">
-                <span>Search for a city:</span>
-                <div class="form-row">
-                    <input class = "form-control input" type="search" id="search-city" placeholder="Type a City Name">
-                    <button class='btn border-primary search' id='search-button' type='submit'><i class="fas fa-search"></i></button>
+                <div class="cities-search">
+                    <span>Search for a city:</span>
+                        <div class="form-row">
+                            <input class = "form-inline mr-sm-2 input" type="search" id="search-city" placeholder="Type a City Name">
+                            <button class='btn border-primary my-2 my-sm-0  search' id='search-button' type='submit'><i class="fas fa-search"></i></button>
+                        </div>
+                
+                    <div class="output"></div>
                 </div>
-            
-                <div class="output"></div>
             </div>
          
+            <!--Current Day Weather-->
                 <div class="col-md-9">
         
-                    <div class="row">
+                    <div class="row five-day">
     
                         <div class="card current">
                     
@@ -56,7 +59,7 @@
         
                     </div>
     
-                    <br>
+                    <!-- 5 Day Forecast-->
     
                     <div class="row">
     
@@ -70,7 +73,6 @@
             
                     </div>
     
-                    <br>
     
                     <div class="row">
     
@@ -175,9 +177,7 @@
 
 
 
-
-
-   
+  
     
 </body>
 

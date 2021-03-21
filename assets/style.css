@@ -1,13 +1,16 @@
-#title{
+.navbar{
     background:#3B3B38;
     font-weight: bold;
     color: whitesmoke;
+    font-size: 50px;
 }
 
-.maincontainer{
-    background-color:#f8f5f3;
-}
 
-.search{
+
+.container-fluid{
     background-color: #f4eeed;
+}
+
+.cities-search{
+    background-color:#f8f5f3;
 }
