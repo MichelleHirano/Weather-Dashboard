@@ -68,6 +68,7 @@ var dayOne = moment(response.list[0].dt_txt).format("ddd, MMM D");
 console.log(moment(response.list[0].dt_txt).format("ddd, MMM D"));
 
 // Transfer day 1 content to HTML
+$(".day-one-temp").text("Temp:" + response.list[0].main.temp);
 $(".day-one-date").html("<h6>" + dayOne + "</h6>");
 $(".day-one-icon").html("<img src='https://openweathermap.org/img/w/" + response.list[0].weather[0].icon + ".png' alt='Icon depicting current weather.'>");
 $(".day-one-humidity").text("Humidity: " + response.list[0].main.humidity + "%");
@@ -100,4 +101,14 @@ $(".day-five-humidity").text("Humidity: " + response.list[32].main.humidity + "%
 
 
 
-})
+});
+
+var currentDay = moment().format("dddd, MMMM Do");
+
+function insertCurrentDay() {
+    $(".current-date").text(currentDay);
+};
+
+insertCurrentDay();
+
+console.log(currentDay);
