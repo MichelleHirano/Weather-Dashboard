@@ -37,4 +37,19 @@ for (var i = 0; i < localStorage.length; i++){
  $('.icon').html("<img src='https://openweathermap.org/img/w/" + response.weather[0].icon + ".png' >" );
  $('.wind').text("Wind Speed: " + response.wind.speed + " MPH");
  $('.humidity').text("Humidity: " + response.main.humidity + "%");
- 
+
+var lon = response.coord.lon;
+var lat = response.coord.lon;
+var queryURLUv = "https://api.openweathermap.org/data/2.5/uvi?" + "lat=" + lat + "&lon=" + lon + apiKey;
+
+$.ajax({
+    url: queryURLUv,
+    method:"GET"
+}
+)
+.then(function(response) {
+    $('.uv').text("UV Index: " + response.value);
+    $('.uv').css("background-color", 'red');
+}
+)
+
