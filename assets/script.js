@@ -72,8 +72,31 @@ $(".day-one-date").html("<h6>" + dayOne + "</h6>");
 $(".day-one-icon").html("<img src='https://openweathermap.org/img/w/" + response.list[0].weather[0].icon + ".png' alt='Icon depicting current weather.'>");
 $(".day-one-humidity").text("Humidity: " + response.list[0].main.humidity + "%");
 
+var dayTwo = moment(response.list[8].dt_txt).format("ddd, MMM D");
+// Transfer day 2 content to HTML
+$(".day-two-date").html("<h6>" + dayTwo + "</h6>");
+$(".day-two-icon").html("<img src='https://openweathermap.org/img/w/" + response.list[8].weather[0].icon + ".png' alt='Icon depicting current weather.'>");
+$(".day-two-humidity").text("Humidity: " + response.list[8].main.humidity + "%");
 
+var dayThree = moment(response.list[16].dt_txt).format("ddd, MMM D");
+// Transfer day 3 content to HTML
+$(".day-three-date").html("<h6>" + dayThree + "</h6>");
+$(".day-three-icon").html("<img src='https://openweathermap.org/img/w/" + response.list[16].weather[0].icon + ".png' alt='Icon depicting current weather.'>");
+$(".day-three-humidity").text("Humidity: " + response.list[16].main.humidity + "%");
 
+var dayFour = moment(response.list[24].dt_txt).format("ddd, MMM D");
+
+// Transfer day 4 content to HTML
+$(".day-four-date").html("<h6>" + dayFour + "</h6>");
+$(".day-four-icon").html("<img src='https://openweathermap.org/img/w/" + response.list[24].weather[0].icon + ".png' alt='Icon depicting current weather.'>");
+$(".day-four-humidity").text("Humidity: " + response.list[24].main.humidity + "%");
+
+var dayFive = moment(response.list[32].dt_txt).format("ddd, MMM D");
+
+// Transfer day 5 content to HTML
+$(".day-five-date").html("<h6>" + dayFive + "</h6>");
+$(".day-five-icon").html("<img src='https://openweathermap.org/img/w/" + response.list[32].weather[0].icon + ".png' alt='Icon depicting current weather.'>");
+$(".day-five-humidity").text("Humidity: " + response.list[32].main.humidity + "%");
 
 
 
