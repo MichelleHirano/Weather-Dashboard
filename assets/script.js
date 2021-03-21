@@ -2,21 +2,6 @@
 var apiKey = '&appid=0352e48c79b86836d1e46ddfaf45a3ac';
 var city = localStorage.getItem('lastresult');
 
-//search field
-var searchInput = document.querySelector('.input');
-var searchOutput = document.querySelector('.output');
-var searchButton = document.querySelector('.search');
-
-searchButton.addEventListener('click', searchFunction);
-
-function searchFunction(){
-    localStorage.setItem('inputcontent-' + searchInput.nodeValue, searchInput.value);
-    localStorage.setItem('lastresult', searchInput.value);
-
-    for (var i = 0; i < localStorage.length; i++){
-        $(".output").append("<p class='cityresult'>" + localStorage.getItem(localStorage.key(i)) + "</p>");
-    }
-}
 
 
 
@@ -116,11 +101,30 @@ $.ajax({
 
         });
 
-var currentDay = moment().format("dddd, MMMM Do");
 
-function insertCurrentDay() {
-    $(".current-date").text(currentDay);
-};
+
+//search field
+var searchInput = document.querySelector('.input');
+var searchOutput = document.querySelector('.output');
+var searchButton = document.querySelector('.search');
+
+searchButton.addEventListener('click', searchFunction);
+
+function searchFunction(){
+    localStorage.setItem('inputcontent-' + searchInput.nodeValue, searchInput.value);
+    localStorage.setItem('lastresult', searchInput.value);
+}
+
+    for (var i = 0; i < localStorage.length; i++){
+        $(".output").append("<p class='cityresult'>" + localStorage.getItem(localStorage.key(i)) + "</p>");
+    }
+
+
+    var currentDay = moment().format("dddd, MMMM Do");
+
+    function insertCurrentDay() {
+        $(".current-date").text(currentDay);
+    };
 
 insertCurrentDay();
 

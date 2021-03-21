@@ -26,13 +26,17 @@
             <!--Search-->
             <div class="col-md-3" id="search">
                 <div class="cities-search">
+                    <div class="card-body">
                     <h3 class="seach-title">Search for a city:</h3>
-                        <div class="form-row">
-                            <input class = "form-inline mr-sm-2 input" type="search" id="search-city" placeholder="Type a City Name">
-                            <button class='btn border-primary my-2 my-sm-0  search' id='search-button' type='submit'><i class="fas fa-search"></i></button>
-                        </div>
+                        <form class="form-inline">
+                            <input class="form-control mr-sm-2 input" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0 search" type="submit">
+                                <i class="fas fa-search-location"></i>
+                            </button>
+                        </form>
                 
                     <div class="output"></div>
+                    </div>
                 </div>
             </div>
          
