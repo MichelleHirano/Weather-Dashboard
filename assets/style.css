@@ -6,11 +6,40 @@
 }
 
 
-
 .container-fluid{
     background-color: #f4eeed;
 }
 
-.cities-search{
-    background-color:#f8f5f3;
+
+
+.search-title{
+    font-size: 30px;
+    font-weight:bold;
+}
+
+.current {
+    border: none;
+    width: 100%;
+    background-color: #f4eeed;
+    margin-right: 25px;
+}
+
+.five-day {
+    border: none;
+    font-size: 24px;
+    width: 100%;
+    background-color: #3B3B38;
+    color: white;
+    margin-right: 25px;
+}
+
+.forecast{
+    border-radius: 25px;
+    border: 2px;
+    padding: 10px 10px;
+    margin-top: 20px;
+}
+
+.current{
+    background: white;
 }
