@@ -112,13 +112,14 @@ var searchButton = document.querySelector('.search');
 searchButton.addEventListener('click', searchFunction);
 
 function searchFunction() {
-    localStorage.setItem( '.output', searchInput.value);
     localStorage.setItem('lastresult', searchInput.value);
 }
 
 for (var i = 0; i < localStorage.length; i++) {
     $(".output").append("<p class='cityresult'>" + localStorage.getItem(localStorage.key(i)) + "</p>");
 }
+
+
 
 //colorcode function
 function uvIndexColor(uvIndexValue) {
