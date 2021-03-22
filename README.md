@@ -14,4 +14,7 @@ THEN I am again presented with current and future conditions for that city
 
 Made by Michelle Hirano using Visual Studio Code
 
-![alt text]
+![alt text](https://github.com/MichelleHirano/Weather-Dashboard/blob/711a61dcafec05a58a65fc80685b05aa7c1d8f63/assets/Challenge6.gif)
+
+Deployed Link:
+https://michellehirano.github.io/Weather-Dashboard/
